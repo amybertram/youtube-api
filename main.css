@@ -10,11 +10,12 @@ body {
 }
 
 form {
+	margin: 20px;
+	padding: 20px;
+	width: 30%;
 	border: 1px solid #548F8B;
 	border-radius: 15px;
 	display: inline-block;
-	padding: 20px;
-	width: 30%;
 }
 
 input {
@@ -34,4 +35,8 @@ button {
 
 button:hover {
 	background-color: grey;
+}
+
+img {
+	margin: 30px;
 }

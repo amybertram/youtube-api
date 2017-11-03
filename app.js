@@ -1,5 +1,5 @@
 //Single State Object
-var state = {
+var data = {
   items: []
 };
 
@@ -10,7 +10,7 @@ function getDataFromApi(searchTerm, callback) {
     part: 'snippet',
     key:'AIzaSyBKraYE20XvQW71WAVGhFnmOqEOYFfvQDc',
     q: searchTerm,
-    per_page: 5
+    maxResults: 6
   }
   $.getJSON(youtubeURL, query, callback);
 }
@@ -24,11 +24,8 @@ function displaySearchResults(data){
 
 //Render Functions
 function renderResult(result) {
-  var resultHTML = 
-  '<h2> Results </h2>' +
-  '<div>' +  
-    '<a href="https://www.youtube.com/watch?v=${result.id.videoId}" target="_blank"><img src="${result.snippet.thumbnails.medium.url}"></a>' +
-  '</div>';
+  var resultHTML =  
+    `<img src="${result.snippet.thumbnails.medium.url}">`;
   return resultHTML; 
 }
 
