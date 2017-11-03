@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+	font-family: 'Spinnaker', sans-serif;
+	text-align: center;
+	background-color: black;
+	color: white;
+}
+
+form {
+	border: 1px solid #548F8B;
+	border-radius: 15px;
+	display: inline-block;
+	padding: 20px;
+	width: 30%;
+}
+
+input {
+	margin-bottom: 15px;
+	width: 75%;
+	border-radius: 5px;
+}
+
+button {
+	display: block;
+	margin: auto;
+	border-radius: 5px;
+	background-color: #548F8B; 
+	cursor: pointer;
+	font-size: 18px;
+}
+
+button:hover {
+	background-color: grey;
+}
