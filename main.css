@@ -37,6 +37,35 @@ button:hover {
 	background-color: grey;
 }
 
+h2 {
+	margin: auto;
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 14px;
+	margin: 10px;
+}
+
 img {
-	margin: 30px;
+	margin-bottom: 30px;
+}
+
+.result-section {
+	border: 1px solid #548F8B;
+	border-radius: 15px;
+	width: 50%;
+	margin: 10px auto;
+}
+
+a:link {
+    color: white; 
+}
+
+a:visited {
+    color: #548F8B;
+}
+
+a:hover {
+    color: grey;
 }

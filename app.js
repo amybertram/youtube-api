@@ -25,7 +25,11 @@ function displaySearchResults(data){
 //Render Functions
 function renderResult(result) {
   var resultHTML =  
-    `<img src="${result.snippet.thumbnails.medium.url}">`;
+    `<div class="result-section">` +
+      `<h2>${result.snippet.title}</h2>` +
+      `<h3>by <a href="https://www.youtube.com/channel/${result.snippet.channelId}">${result.snippet.channelTitle}</a></h3>` + 
+      `<a href="https://www.youtube.com/watch?v=${result.id.videoId}"><img src="${result.snippet.thumbnails.medium.url}"></a>` +
+    `</div>`;
   return resultHTML; 
 }
 
