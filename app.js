@@ -4,13 +4,13 @@ var data = {
 };
 
 //Modification Functions
-function getDataFromApi(searchTerm, callback) {
+function getDataFromApi(searchTerm, pageCount, callback) {
   var youtubeURL = 'https://www.googleapis.com/youtube/v3/search';
   var query = {
     part: 'snippet',
     key:'AIzaSyBKraYE20XvQW71WAVGhFnmOqEOYFfvQDc',
     q: searchTerm,
-    maxResults: 6
+    maxResults: 6,
   }
   $.getJSON(youtubeURL, query, callback);
 }
@@ -27,8 +27,8 @@ function renderResult(result) {
   var resultHTML =  
     `<div class="result-section">` +
       `<h2>${result.snippet.title}</h2>` +
-      `<h3>by <a href="https://www.youtube.com/channel/${result.snippet.channelId}">${result.snippet.channelTitle}</a></h3>` + 
-      `<a href="https://www.youtube.com/watch?v=${result.id.videoId}"><img src="${result.snippet.thumbnails.medium.url}"></a>` +
+      `<h3>by <a href="https://www.youtube.com/channel/${result.snippet.channelId}" target="_blank">${result.snippet.channelTitle}</a></h3>` + 
+      `<a href="https://www.youtube.com/watch?v=${result.id.videoId}" target="_blank"><img src="${result.snippet.thumbnails.medium.url}"></a>` +
     `</div>`;
   return resultHTML; 
 }
@@ -39,9 +39,10 @@ function watchSubmit() {
     event.preventDefault();
     var queryTarget = $(event.currentTarget).find('.js-query');
     var query = queryTarget.val();
+    var pageCount = 1;
     // clear out the input
     queryTarget.val("");
-    getDataFromApi(query, displaySearchResults);
+    getDataFromApi(query, pageCount, displaySearchResults);
   });
 }
 

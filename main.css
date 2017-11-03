@@ -47,15 +47,16 @@ h3 {
 	margin: 10px;
 }
 
-img {
-	margin-bottom: 30px;
-}
-
 .result-section {
 	border: 1px solid #548F8B;
 	border-radius: 15px;
 	width: 50%;
 	margin: 10px auto;
+	padding: 20px;
+}
+
+img:hover {
+	border: 2px solid white;
 }
 
 a:link {
