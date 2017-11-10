@@ -70,3 +70,23 @@ a:visited {
 a:hover {
     color: grey;
 }
+
+.hidden{
+  display:none;
+}
+
+#black-screen{
+  position: fixed;
+  top:0px;
+  bottom: 0px;
+  right:0px;
+  left:0px;
+  background-color:rgba(0,0,0,0.5);
+}
+
+#white-screen{
+  display:inline-block;
+  padding:30px;
+  margin: 15% auto;
+  background-color:white;
+}
